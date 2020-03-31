@@ -3,7 +3,7 @@
 <head>
 
   <title>Isolation Bots</title>
-  
+
   <style>
 
     body {
@@ -16,25 +16,96 @@
       color: #e0d907;
     }
 
+    h2 {
+      text-decoration: underline;
+    }
+
   </style>
 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
 </head>
+
 <body>
 
-  <h1>EclecticMatt's Isolation Bots</h1>
+  <div class='w3-card w3-deep-purple'>
 
-  <p>This is a summary of my Isolation Bots for remote gameplay!</p>
+    <h1>EclecticMatt's Isolation Bots</h1>
 
-  <h2>Codenames Bot</h2>
+    <p>This is a summary of my Isolation Bots for remote gameplay!</p>
 
-  <p><b>Description: </b>This is a bot for playing games of Codenames via Discord. The bot generates the Spymaster and word grids, and sends these via both public and private messages for the players.</p>
-  <br>
-  <p><b>Invite link: </b><a href='https://bit.ly/2UlcdTf'>https://bit.ly/2UlcdTf</a></p>
-  <br>
-  <p><b>Github link: </b><a href='https://github.com/eclectic-matt/Node.JS/tree/master/Codenames-Bot'>https://github.com/eclectic-matt/Node.JS/tree/master/Codenames-Bot</a></p>
-  <br>
-  <p><b>Last Update: </b>30 March 2020 - Quality of life improvement. Added several quality of life improvements.  Note - config.json file added which must be added to future builds! Welcome message - will now automatically send the welcome message to a channel when the bot is added/active. !cn issue - allows users to report issues or give feedback, which will be logged to the Heroku console. !cn update - shows users the new changes added in this update.</p>
-  <br>
+    <p><b>Please support me on <a href='https://ko-fi.com/eclecticmatt'>Ko-fi</a> or <a href='https://www.patreon.com/join/EclecticMatt?'>Patreon</a> to help me keep these Bots running!</b></p>
+
+    <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#5d0b9c', 'X8X71KC1W');kofiwidget2.draw();</script>
+
+    <a href="https://www.patreon.com/bePatron?u=6155523" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+
+    <button onclick="accordion('Instructions')" class="w3-btn w3-block w3-green w3-center w3-xxlarge">Instructions for the Bots</button>
+    <div id="Instructions" class="w3-container w3-hide w3-light-green w3-animate-zoom">
+
+      <p><b>Getting started: </b>You will need to invite your chosen Bot to a Discord server where you have admin rights. Use the invitation link for the Bot below, and then choose which server to add it into. You will need to give them admin rights, so they can read/send messages in the channel and send direct messages to users in that channel.</p>
+
+      <p><b>Using the Bots: </b>Each Bot has its own commands, which will be listed in the information for your selected Bot below. The Bot should send a welcome message in the channel when it gets added, so you know the "help" command to learn how to use them.</p>
+
+      <p><b>Installing Bots yourself: </b>All of the source code for each Bot is available on Github. Use the README in the main folder for installation instructions, including any dependencies which will need to be installed at the same time (all the Bots run on Node.JS so some familiarity with Node and NPM would be helpful).</p>
+
+      <p><b>Bot hosting: </b>The Bots are hosted on Heroku, which allows them to run permanently for gamers across the world. However, this may have to change once more Bots are added, as my free "dynos" only allow a certain amount of free hours. If you would like to contribute then please send me a coffee or subscribe to my Patreon to help fund development of these Bots!</p>
+
+    </div>
+
+    <button onclick="accordion('Bot1')" class="w3-btn w3-block w3-deep-orange w3-center w3-xxlarge">Codenames Bot (live)</button>
+    <div id="Bot1" class="w3-container w3-hide w3-orange w3-animate-zoom">
+
+      <p><b>Description: </b>This is a bot for playing games of Codenames via Discord. The bot generates the Spymaster and word grids, and sends these via both public and private messages for the players.</p>
+
+      <p><b><a href='https://bit.ly/2UlcdTf'>Bot Invitation Link</a></b></p>
+      <p><b><a href='https://github.com/eclectic-matt/Node.JS/tree/master/Codenames-Bot'>Github Source Code link</a></b></p>
+
+      <p><b>Last Update: </b>30 March 2020 - Quality of life improvement. Added several quality of life improvements.  Note - config.json file added which must be added to future builds! Welcome message - will now automatically send the welcome message to a channel when the bot is added/active. !cn issue - allows users to report issues or give feedback, which will be logged to the Heroku console. !cn update - shows users the new changes added in this update.</p>
+
+    </div>
+
+    <button onclick="accordion('Bot2')" class="w3-btn w3-block w3-dark-gray w3-center w3-xxlarge">Secret Hitler Bot (in progress)</button>
+    <div id="Bot2" class="w3-container w3-hide w3-gray w3-animate-zoom">
+      <p><b>Description: </b>This is a bot for playing games of Secret Hitler via Discord. The bot handles all game processes (like nomination/voting) via both public and private messages for the players and displays the game board.</p>
+
+      <p><b><a href=''>Bot Invitation Link (to follow)</a></b></p>
+      <p><b><a href=''>Github Source Code link (to follow)</a></b></p>
+
+      <p><b>Last Update: </b>31 March 2020 - Secret roles allocated and privately sent to players. Nominations are implemented, voting nearly done. Making the game customisable so you don't have to be "hitler" but can play as "Trump" or someone less fascist if you prefer! Just need to actually process the voting results and then get to the "legislative" (policy) phase. Also thinking through how the special executive actions will work, as they are another layer of complexity on top of quite a simple game loop!</p>
+
+    </div>
+
+    <button onclick="accordion('PlannedBots')" class="w3-btn w3-block w3-purple w3-center w3-xxlarge">Planned Bots (in the future)</button>
+    <div id="PlannedBots" class="w3-container w3-hide w3-gray w3-animate-zoom">
+      <p><b>These are Bots I intend to make in the near future: </b></p>
+
+      <ul>
+        <li>Secret Hitler (in progress - see above)</li>
+        <li>Spyfall</li>
+        <li>The Chameleon</li>
+        <li>Werewolf/Mafia</li>
+        <li>Articulate</li>
+      </ul>
+
+    </div>
+
+
+
+  </div>
+
+  <script>
+  function accordion(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+
 
 
 </body>
