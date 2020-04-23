@@ -2,35 +2,160 @@
 <html>
 <head>
 
-  <title>Isolation Bots</title>
+  <title>Virtual Pub Quizzes</title>
   <link rel='icon' type='image/png' href='EAD logo v2 16px.png'>
   <meta property='og:image' content='EAD logo v2 64px.png' />
   <meta property='og:image:url' content='EAD logo v2 64px.png' />
-  
-  <style>
-
-    body {
-      background-color: #340f85;
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    a {
-      color: #e0d907;
-    }
-    
-  </style>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href='https://eclectic-matt.github.io'/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+<style>
+
+:root{
+  --header-colour: #1B0648;   /* Russian Violet - deep purple */
+  --bg-colour: #9BF3F0;       /* Celeste - light blue */
+  --aside-colour: #473198;    /* Blue pigment - light purple */
+  --menu-colour: #235924;     /* Lincoln Green - dark green */
+  --menu-hl-colour: #9EE37D;  /* Light green */
+  --font-colour: #ffffff;     /* White */
+  --font-hl-colour: #000000;  /* Black */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bg-colour);
+  color: var(--font-hl-colour);
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  background-color: var(--header-colour);
+  color: var(--font-colour) !important;
+  padding: 15px;
+  text-align: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: var(--menu-colour);
+  color: var(--font-colour);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: var(--menu-hl-colour);
+  color: var(--font-hl-colour);
+}
+
+a {
+  color: var(--font-colour);
+}
+
+a:visited, a:hover, a.bodyLink{
+  color: var(--font-hl-color);
+}
+
+a.headLink{
+  text-decoration: none;
+}
+
+.aside {
+  background-color: var(--aside-colour);
+  padding: 15px;
+  color: var(--font-colour);
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: var(--aside-colour);
+  color: var(--font-colour);
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+</style>
 
 </head>
-
 <body>
+<div class="header">
+  <h1><a class='headLink' href='../Github-Pages-Home/index.html'>EclecticMatt's Isolation Bots</a></h1>
+</div>
 
-  <div class='w3-card w3-deep-purple w3-padding'>
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+      <li><a href='../Isolation-Bots'>Isolation Bots</a></li>
+      <li><a href='../Virtual-Pub-Quiz/'>Virtual Pub Quiz</a></li>
+      <li><a href='../web-deployment/'>My Old Website</a></li>
+    </ul>
+  </div>
 
-    <h1>EclecticMatt's Isolation Bots</h1>
+  <div class="col-6 col-s-9">
+    <h2>Isolation Bots for Discord</h2>
 
     <p>This is a summary of my Isolation Bots for remote gameplay! These are Bots which allow players to play party and board games via Discord. Find out more about the Bots by clicking the large headings below!</p>
 
@@ -52,75 +177,90 @@
         <a href="https://www.patreon.com/bePatron?u=6155523" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
       </div>
 
-    </div>
+  </div>
 
-    <br><br>
+  <button onclick="accordion('Instructions')" class="w3-btn w3-border w3-block w3-indigo w3-hover-pale-red w3-center w3-xxlarge">Instructions for the Bots</button>
+  <div id="Instructions" class="w3-container w3-hide w3-indigo w3-animate-zoom">
 
-    <button onclick="accordion('Instructions')" class="w3-btn w3-border w3-block w3-indigo w3-hover-pale-red w3-center w3-xxlarge">Instructions for the Bots</button>
-    <div id="Instructions" class="w3-container w3-hide w3-indigo w3-animate-zoom">
+    <p><b>Getting started: </b>You will need to invite your chosen Bot to a Discord server where you have admin rights. Use the invitation link for the Bot below, and then choose which server to add it into. You will need to give them admin rights, so they can read/send messages in the channel and send direct messages to users in that channel.</p>
 
-      <p><b>Getting started: </b>You will need to invite your chosen Bot to a Discord server where you have admin rights. Use the invitation link for the Bot below, and then choose which server to add it into. You will need to give them admin rights, so they can read/send messages in the channel and send direct messages to users in that channel.</p>
+    <p><b>Using the Bots: </b>Each Bot has its own commands, which will be listed in the information for your selected Bot below. The Bot should send a welcome message in the channel when it gets added, so you know the "help" command to learn how to use them.</p>
 
-      <p><b>Using the Bots: </b>Each Bot has its own commands, which will be listed in the information for your selected Bot below. The Bot should send a welcome message in the channel when it gets added, so you know the "help" command to learn how to use them.</p>
+    <p><b>Installing Bots yourself: </b>All of the source code for each Bot is available on Github. Use the README in the main folder for installation instructions, including any dependencies which will need to be installed at the same time (all the Bots run on Node.JS so some familiarity with Node and NPM would be helpful).</p>
 
-      <p><b>Installing Bots yourself: </b>All of the source code for each Bot is available on Github. Use the README in the main folder for installation instructions, including any dependencies which will need to be installed at the same time (all the Bots run on Node.JS so some familiarity with Node and NPM would be helpful).</p>
-
-      <p><b>Bot hosting: </b>The Bots are hosted on Heroku, which allows them to run permanently for gamers across the world. However, this may have to change once more Bots are added, as my free "dynos" only allow a certain amount of free hours. If you would like to contribute then please send me a coffee or subscribe to my Patreon to help fund development of these Bots!</p>
-
-    </div>
-
-    <button onclick="accordion('Bot1')" class="w3-btn w3-border w3-block w3-blue w3-hover-pale-red w3-center w3-xxlarge">Codenames Bot (live)</button>
-    <div id="Bot1" class="w3-container w3-hide w3-blue w3-animate-zoom">
-
-      <p><b>Description: </b>This is a bot for playing games of Codenames via Discord. The bot generates the Spymaster and word grids, and sends these via both public and private messages for the players.</p>
-
-      <p><b><a href='https://bit.ly/2UlcdTf'>Bot Invitation Link</a></b></p>
-      <p><b><a href='https://github.com/eclectic-matt/Node.JS/tree/master/RasPi%20Discord%20Bots/codenames-bot'>Github Source Code link</a></b></p>
-
-      <p><b>Last Update: </b>30 March 2020 - Quality of life improvement. Added several quality of life improvements.  Note - config.json file added which must be added to future builds! Welcome message - will now automatically send the welcome message to a channel when the bot is added/active. !cn issue - allows users to report issues or give feedback, which will be logged to the Heroku console. !cn update - shows users the new changes added in this update.</p>
-
-    </div>
-
-    <button onclick="accordion('Bot2')" class="w3-btn w3-border w3-block w3-indigo w3-hover-pale-red w3-center w3-xxlarge">Secret Roles Bot (beta)</button>
-    <div id="Bot2" class="w3-container w3-hide w3-indigo w3-animate-zoom">
-      <p><b>Description: </b>This is a bot for playing games of Secret Hitler via Discord. The bot handles all game processes, such as assigning secret roles privately, private voting, game board display and updates, and also has multiple themes if you don't like the default Secret Hitler.</p>
-
-      <p><b><a href='https://bit.ly/2XLbCwa'>Bot Invitation Link</a></b></p>
-      <p><b><a href='https://github.com/eclectic-matt/Node.JS/tree/master/RasPi%20Discord%20Bots/secret-hitler-bot'>Github Source Code link</a></b></p>
-
-      <p><b>Last Update: </b>16 April 2020 - Bot is now released in beta - all features implemented and available for people to try out!</p>
-
-    </div>
-
-    <button onclick="accordion('PlannedBots')" class="w3-btn w3-border w3-block w3-blue w3-hover-pale-red w3-center w3-xxlarge">Planned Bots (in the future)</button>
-    <div id="PlannedBots" class="w3-container w3-hide w3-blue w3-animate-zoom">
-      <p><b>These are Bots I intend to make in the near future: </b></p>
-
-      <ul>
-        <li>Spyfall</li>
-        <li>The Chameleon</li>
-        <li>Werewolf/Mafia</li>
-        <li>Articulate</li>
-      </ul>
-
-    </div>
-
-
+    <p><b>Bot hosting: </b>The Bots are hosted on Heroku, which allows them to run permanently for gamers across the world. However, this may have to change once more Bots are added, as my free "dynos" only allow a certain amount of free hours. If you would like to contribute then please send me a coffee or subscribe to my Patreon to help fund development of these Bots!</p>
 
   </div>
 
-  <script>
-  function accordion(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else {
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }
-  </script>
+  <button onclick="accordion('Bot1')" class="w3-btn w3-border w3-block w3-blue w3-hover-pale-red w3-center w3-xxlarge">Codenames Bot (live)</button>
+  <div id="Bot1" class="w3-container w3-hide w3-blue w3-animate-zoom">
 
+    <p><b>Description: </b>This is a bot for playing games of Codenames via Discord. The bot generates the Spymaster and word grids, and sends these via both public and private messages for the players.</p>
 
+    <p><b><a href='https://bit.ly/2UlcdTf'>Bot Invitation Link</a></b></p>
+    <p><b><a href='https://github.com/eclectic-matt/Node.JS/tree/master/RasPi%20Discord%20Bots/codenames-bot'>Github Source Code link</a></b></p>
+
+    <p><b>Last Update: </b>30 March 2020 - Quality of life improvement. Added several quality of life improvements.  Note - config.json file added which must be added to future builds! Welcome message - will now automatically send the welcome message to a channel when the bot is added/active. !cn issue - allows users to report issues or give feedback, which will be logged to the Heroku console. !cn update - shows users the new changes added in this update.</p>
+
+  </div>
+
+  <button onclick="accordion('Bot2')" class="w3-btn w3-border w3-block w3-indigo w3-hover-pale-red w3-center w3-xxlarge">Secret Roles Bot (beta)</button>
+  <div id="Bot2" class="w3-container w3-hide w3-indigo w3-animate-zoom">
+    <p><b>Description: </b>This is a bot for playing games of Secret Hitler via Discord. The bot handles all game processes, such as assigning secret roles privately, private voting, game board display and updates, and also has multiple themes if you don't like the default Secret Hitler.</p>
+
+    <p><b><a href='https://bit.ly/2XLbCwa'>Bot Invitation Link</a></b></p>
+    <p><b><a href='https://github.com/eclectic-matt/Node.JS/tree/master/RasPi%20Discord%20Bots/secret-hitler-bot'>Github Source Code link</a></b></p>
+
+    <p><b>Last Update: </b>16 April 2020 - Bot is now released in beta - all features implemented and available for people to try out!</p>
+
+  </div>
+
+  <button onclick="accordion('PlannedBots')" class="w3-btn w3-border w3-block w3-blue w3-hover-pale-red w3-center w3-xxlarge">Planned Bots (in the future)</button>
+  <div id="PlannedBots" class="w3-container w3-hide w3-blue w3-animate-zoom">
+    <p><b>These are Bots I intend to make in the near future: </b></p>
+
+    <ul>
+      <li>Spyfall</li>
+      <li>The Chameleon</li>
+      <li>Werewolf/Mafia</li>
+      <li>Articulate</li>
+    </ul>
+
+  </div>
+
+</div>
+
+<div class="footer">
+
+  <h3>Thanks for stopping by!</h3>
+
+  <div class='w3-container w3-row-padding w3-center'>
+
+      <div class='w3-half w3-center'>
+        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#5d0b9c', 'X8X71KC1W');kofiwidget2.draw();</script>
+      </div>
+
+      <div class='w3-half w3-center'>
+        <a href="https://www.patreon.com/bePatron?u=6155523" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+      </div>
+
+    </div>
+
+    <b>(c) Matt Tiernan 2020</b>
+</div>
+
+</div>
+
+<script>
+function accordion(id) {
+var x = document.getElementById(id);
+if (x.className.indexOf("w3-show") == -1) {
+  x.className += " w3-show";
+} else {
+  x.className = x.className.replace(" w3-show", "");
+}
+}
+</script>
 
 </body>
 </html>
